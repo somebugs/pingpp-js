@@ -101,6 +101,7 @@ var utils = module.exports = {
     }
     var form = document.createElement('form');
     form.setAttribute('method', method);
+    form.setAttribute('target', '_top');
     form.setAttribute('action', url);
 
     for (var key in params) {

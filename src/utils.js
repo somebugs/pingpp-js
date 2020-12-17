@@ -101,7 +101,6 @@ var utils = module.exports = {
     }
     var form = document.createElement('form');
     form.setAttribute('method', method);
-    form.setAttribute('target', '_top');
     form.setAttribute('action', url);
 
     for (var key in params) {
@@ -142,7 +141,7 @@ var utils = module.exports = {
       console.log('Not a browser, redirect url: ' + url);
       return;
     }
-    window.location.href = url;
+    window.top.location.href = url;
   },
 
   inWeixin: function () {
